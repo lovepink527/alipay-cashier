@@ -1,0 +1,6 @@
+{
+  "pullRefresh": true,
+  "defaultTitle": "订单列表",
+  "allowsBounceVertical": "NO",
+  "titleBarColor": "#fff"
+}

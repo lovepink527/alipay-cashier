@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "page/tabBar/home/index",
+    "page/tabBar/order/index",
+    "page/tabBar/my/index",
+    "page/detail/index",
+    "page/pay/index"
+  ],
+  "subPackages": [
+    {
+      "root": "page/home",
+      "pages": [
+        
+      ]
+    }
+  ],
+  "preloadRule": {
+    "page/tabBar/home/index": {
+      "network": "wifi",
+      "packages": [
+        "page/home"
+      ]
+    }
+  },
+  "window": {
+    "defaultTitle": "",
+    "backgroundColor": "#F5F5F9",
+    "pullRefresh": true,
+    "allowsBounceVertical": "YES",
+    "titleBarColor": "#fff"
+  },
+  "tabBar": {
+    "textColor": "#404040",
+    "selectedColor": "#b23534",
+    "backgroundColor": "#F5F5F9",
+    "items": [
+      {
+        "pagePath": "page/tabBar/home/index",
+        "icon": "images/index-off.png",
+        "activeIcon": "images/index-on.png",
+        "name": "首页"
+      },
+      {
+        "pagePath": "page/tabBar/order/index",
+        "icon": "images/qc-off.png",
+        "activeIcon": "images/qc-on.png",
+        "name": "订单"
+      }
+    ]
+
+  },
+  "behavior": {
+    "requestReferrerStrategy": "page"
+  }
+}

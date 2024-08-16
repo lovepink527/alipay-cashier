@@ -1,0 +1,56 @@
+<!--pages/pay/index.wxml-->
+<!-- <navigation-bar title="付款" back="{{true}}" color="#b23634" background="#FFF"></navigation-bar> -->
+<view class="container-info">
+    <image class="container-image" src="{{shopInfo.shop_avatar}}" mode="scaleToFill"/>
+    <text class="container-text">{{shopInfo.shop_name}}</text>
+</view>
+<view class="container-card">
+    <view class="container-pay">
+      <view class="container-desc">
+        <image class="icon-pay" src="../../images/pay.png" mode="widthFix"/>
+        <text>消费金额</text>
+      </view>
+      <text>{{total}}¥</text>
+    </view>
+    <view class="container-input" onTap="show">
+      <!-- <image class="icon-input" src="../../images/input.png" mode=""/> -->
+      <text>备注</text>
+    </view>
+</view>
+<!-- 弹出输入框 -->
+<!-- <modal hidden="{{hiddenmodalput}}" title="添加备注" confirm-text="确认" cancel-text="取消" bindcancel="cancelInput" bindconfirm="confirmInput">
+  <input class="input" type='text' placeholder="收款人可见，最多20个字" bindinput="inputDesc" auto-focus maxlength="20" />
+<textarea placeholder="请输入内容"></textarea>
+</modal> -->
+<view class="container-bottom">
+  <view class="pay">
+    <view class="num">
+    <view class="col">
+      <view class="item" id='7' onTap="inputNumber">7</view>
+      <view class="item" id='4' onTap="inputNumber">4</view>
+      <view class="item" id='1' onTap="inputNumber">1</view>
+      <view class="item" id='.' onTap="inputNumber">.</view>
+    </view>
+    <view class="col">
+      <view class="item" id='8' onTap="inputNumber">8</view>
+      <view class="item" id='5' onTap="inputNumber">5</view>
+      <view class="item" id='2' onTap="inputNumber">2</view>
+      <view class="item" id='0' onTap="inputNumber">0</view>
+    </view>
+    <view class="col">
+      <view class="item" id='9' onTap="inputNumber">9</view>
+      <view class="item" id='6' onTap="inputNumber">6</view>
+      <view class="item" id='3' onTap="inputNumber">3</view>
+      <view class="item" id='00' onTap="inputNumber">00</view>
+    </view>
+  </view>
+  <view class="mark">
+    <view class="item" id="del" onTap="inputNumber">
+      <image class="delete" src="../../images/del.png" mode="widthFix"/>
+    </view>
+		<view class="item" id="c" onTap="pay">
+      确定
+    </view>
+  </view>
+  </view>
+</view>

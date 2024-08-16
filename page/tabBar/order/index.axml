@@ -1,0 +1,23 @@
+<scroll-view a:if="{{list.length!==0}}" class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view a:for="{{ list }}" a:for-index="idx" a:for-item="item" data-id="{{ item.id }}" class="container-item" onTap="handleDetail">
+      <view class="container-header">
+        <text>{{item.created_at}}</text>
+        <image src="../../images/over.png" mode=""/>
+      </view>
+      <view class="container-title">
+        <image class="container-avatar" mode="scaleToFill" src="{{item.shop.shop_avatar}}"></image>
+        <text>{{item.shop.shop_name}}</text>
+      </view>
+      <view class="container-bottom">
+          <text>实付: ¥{{item.total}}</text>
+      </view>
+      
+    </view>
+    <text class="container-text">没有更多了哦~</text>
+  </view>
+</scroll-view>
+<view a:else class="no-data">
+  <image src="../../images/no-data.png" mode=""/>
+  <text>暂无数据～</text>
+</view>

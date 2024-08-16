@@ -1,0 +1,24 @@
+<!-- <view style={height: }>
+  
+</view> -->
+<scroll-view class="scrollarea" a:if="{{ list.length !== 0 }}">
+  <view class="container">
+    <view a:for="{{ list }}" a:for-index="idx" a:for-item="item" data-id="{{ item.id }}" class="container-item" onTap="handleDetail">
+      <image class="container-avatar" mode="scaleToFill" src="{{item.shop_avatar}}"></image>
+      <view class="container-info">
+        <text class="name">{{ item.shop_name }}</text>
+        <view class="type">
+          <text>{{ item.type }}</text>
+        </view>
+        <!-- <view class="container-extra">
+          <image src="../../images/hot.png" mode="" />
+        </view> -->
+      </view>
+    </view>
+    <text class="container-text">没有更多了哦~</text>
+  </view>
+</scroll-view>
+<view a:else class="no-data">
+  <image src="../../../images/no-data.png" mode="widthFix"/>
+  <text>暂无数据～</text>
+</view>
